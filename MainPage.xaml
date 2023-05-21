@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"             
+             x:Class="MauiApp1.MainPage">
+
+    <gauge:SfRadialGauge x:Name="clock">
+        <gauge:SfRadialGauge.Axes>
+            
+            <gauge:RadialAxis StartAngle="270"
+                              EndAngle="270"
+                              Minimum="0"
+                              Maximum="12"
+                              ShowFirstLabel="False"
+                              Interval="1"
+                              MinorTicksPerInterval="4">
+
+                <gauge:RadialAxis.AxisLineStyle>
+                    <gauge:RadialLineStyle ThicknessUnit="Pixel" Thickness="90" />
+                </gauge:RadialAxis.AxisLineStyle>
+
+                <gauge:RadialAxis.MajorTickStyle>
+                    <gauge:RadialTickStyle LengthUnit="Factor" Length="0.1"/>
+                </gauge:RadialAxis.MajorTickStyle>
+                <gauge:RadialAxis.MinorTickStyle>
+                    <gauge:RadialTickStyle LengthUnit="Factor" Length="0.05"/>
+                </gauge:RadialAxis.MinorTickStyle>
+                <gauge:RadialAxis.AxisLabelStyle>
+                    <gauge:GaugeLabelStyle 
+                                           FontAttributes="Bold"
+                                           FontSize="55"/>
+                </gauge:RadialAxis.AxisLabelStyle>
+
+                <!--<gauge:RadialAxis.Pointers>
+                    <gauge:NeedlePointer x:Name="hou"
+                                         NeedleEndWidth="20"
+                                         NeedleFill="Black"
+                                         NeedleLengthUnit="Pixel"
+                                         NeedleLength="230"
+                                         KnobRadius="0.06"
+                                         />
+                    <gauge:NeedlePointer x:Name="min"
+                                         NeedleEndWidth="15"
+                                         NeedleFill="Black"
+                                         NeedleLengthUnit="Pixel"
+                                         NeedleLength="300"
+                                         KnobRadius="0.06"
+                                         />
+                    <gauge:NeedlePointer x:Name="sec"
+                                         NeedleEndWidth="10"
+                                         NeedleFill="red"
+                                         NeedleLengthUnit="Pixel"
+                                         NeedleLength="350"
+                                         TailLengthUnit="Pixel"
+                                         TailLength="60"
+                                         TailFill="red"
+                                         KnobRadius="0.06"
+                                         KnobStrokeThickness="0.02"
+                                         KnobStroke="Black"
+                                         KnobFill="White" 
+                                         EnableAnimation="True"
+                                         AnimationDuration="800"
+                                         AnimationEasing="{x:Static Easing.BounceOut}"/>
+                </gauge:RadialAxis.Pointers>-->
+
+
+
+                <gauge:RadialAxis.Pointers>
+                    <gauge:RangePointer x:Name="hou"
+                                        CornerStyle="EndCurve"
+                                        PointerWidth="30"
+                                        EnableAnimation="True"
+                                        AnimationDuration="800"
+                                        Fill="red"
+                                        PointerOffset="73"
+                                        AnimationEasing="{x:Static Easing.SpringOut}">
+                    </gauge:RangePointer>
+
+                    <gauge:RangePointer x:Name="min"
+                                        CornerStyle="EndCurve"
+                                        PointerWidth="30"
+                                        EnableAnimation="True"
+                                        AnimationDuration="800"
+                                        Fill="orange"
+                                        PointerOffset="37"
+                                        AnimationEasing="{x:Static Easing.SpringOut}">
+                    </gauge:RangePointer>
+                    <gauge:RangePointer x:Name="sec"
+                                        CornerStyle="EndCurve"
+                                        PointerWidth="30"
+                                        EnableAnimation="True"
+                                        AnimationDuration="800"
+                                        Fill="ForestGreen"
+                                        AnimationEasing="{x:Static Easing.SpringOut}">
+                        <gauge:RangePointer.GradientStops>
+                            <gauge:GaugeGradientStop Value="0"
+                                                     Color="ForestGreen" />
+                            <gauge:GaugeGradientStop Value="12"
+                                                     Color="DarkGreen"/>
+                        </gauge:RangePointer.GradientStops>
+                    </gauge:RangePointer>
+                </gauge:RadialAxis.Pointers>
+                
+                
+
+
+
+            </gauge:RadialAxis>
+        </gauge:SfRadialGauge.Axes>
+    </gauge:SfRadialGauge>
+
+</ContentPage>
